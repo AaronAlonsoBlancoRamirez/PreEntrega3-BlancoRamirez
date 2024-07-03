@@ -1,0 +1,172 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* SECCION DE LOGO Y BARRA DE NAVEGACION */
+.navbar {
+    background-color: #333;
+    padding: 20px 20px;
+    border-bottom: 1px solid #652828;
+    height: 70px; /* Altura fija */
+}
+
+.navbar-nav li {
+    margin-left: 100px; /* Ajusta este valor según necesites */
+    margin-right: 10px; /* Ajusta este valor según necesites */
+}
+
+/* Estilo para los enlaces dentro de la barra de navegación */
+.navbar-nav a {
+    padding: 10px 15px; /* Ajusta este valor según necesites */
+    font-size: 16px; /* Ajusta el tamaño de la fuente según necesites */
+    text-transform: uppercase; /* Para mantener el texto en mayúsculas */
+}
+
+#logo-img {
+    max-height: 70px; /* Ajusta la altura del logo para que encaje dentro de la barra de navegación */
+    margin: 5px; /* Añade margen alrededor del logo */
+    width: auto; /* Mantiene la proporción del logo */
+    background-color: #ffffff;
+}
+
+.navbar-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.nav-link {
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    transition: color 0.3s;
+    padding: 10px;
+    flex: 1; /* Asegura que cada enlace ocupe un espacio equitativo */
+    text-align: center;
+}
+
+.nav-link:hover {
+    color: #fff;
+}
+
+.navbar-brand, .navbar-toggler {
+    margin-right: 20px;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+/* PRIMERA SECCION DE MENU DESLIZANTE Y TEXTO */
+.container-fluid {
+    padding: 20px;
+}
+
+.carousel-inner img {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+button.btn {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+button.btn:hover {
+    background-color: #555;
+}
+
+/* SECCION DE CONTACTOS */
+#contacto {
+    background-color: #333;
+    color: white;
+    padding: 40px 20px; /* Incrementar el padding para hacer la sección más ancha */
+    text-align: center;
+}
+
+
+#contacto h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    margin: 20px; /* Espacio alrededor de cada ítem */
+    text-align: center; /* Centrar texto e íconos */
+    
+}
+
+.contact-item i {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 24px; /* Tamaño de íconos */
+    
+}
+
+#contacto .icono-redes {
+    color: white;
+    font-size: 24px;
+    margin: 0 5px;
+}
+
+/* Estilos para los íconos de Facebook e Instagram */
+#contacto .icono-redes-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Espacio entre los íconos */
+}
+
+#contacto .icono-redes .fab.fa-facebook-square {
+    color: #3b5998; /* Color oficial de Facebook */
+}
+
+#contacto .icono-redes .fab.fa-instagram {
+    color: #E1306C; /* Color oficial de Instagram */
+}
+
+/* Colores específicos para los íconos */
+#contacto .icono-localizacion {
+    color: #FF6347; /* Color rojo para el ícono de localización */
+}
+
+#contacto .icono-correo {
+    color: #32CD32; /* Color verde para el ícono de correo */
+}
+
+#contacto .icono-telefono {
+    color: #1E90FF; /* Color azul para el ícono de teléfono */
+}
