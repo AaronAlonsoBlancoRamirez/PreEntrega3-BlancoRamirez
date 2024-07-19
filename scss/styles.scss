@@ -1,0 +1,212 @@
+/* Variables */
+$primary-color: #333;
+$secondary-color: #652828;
+$font-color: white;
+$transition-time: 0.3s;
+$border-radius: 5px;
+$background-color-hover: lighten($primary-color, 10%);
+$background-color-active: darken($primary-color, 10%);
+$text-color-muted: lighten($font-color, 40%);
+
+/* Mixins */
+@mixin button-styles($bg-color, $text-color, $border-radius: $border-radius) {
+  background-color: $bg-color;
+  color: $text-color;
+  padding: 10px 20px;
+  border: none;
+  border-radius: $border-radius;
+  transition: background-color $transition-time;
+
+  &:hover {
+    background-color: lighten($bg-color, 20%);
+  }
+}
+
+@mixin transition($property, $time: $transition-time) {
+  transition: $property $time;
+}
+
+/* Extend */
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* SECCION DE LOGO Y BARRA DE NAVEGACION */
+.navbar {
+  background-color: $primary-color;
+  padding: 20px 20px;
+  border-bottom: 1px solid $secondary-color;
+  height: 70px;
+  
+  .navbar-nav {
+    width: 100%;
+    @extend %flex-center;
+    justify-content: space-between;
+
+    li {
+      margin-left: 100px;
+      margin-right: 10px;
+    }
+
+    a {
+      padding: 10px 15px;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+  }
+
+  #logo-img {
+    max-height: 70px;
+    margin: 5px;
+    width: auto;
+    background-color: #ffffff;
+  }
+
+  .nav-link {
+    text-decoration: none;
+    color: $font-color;
+    text-transform: uppercase;
+    @include transition(color);
+
+    &:hover {
+      color: $font-color;
+    }
+
+    &:focus, &:active {
+      outline: 2px solid lighten($primary-color, 20%);
+    }
+  }
+
+  .navbar-brand, .navbar-toggler {
+    margin-right: 20px;
+  }
+
+  .navbar-collapse {
+    justify-content: flex-end;
+  }
+}
+
+/* PRIMERA SECCION DE MENU DESLIZANTE Y TEXTO */
+.container-fluid {
+  padding: 20px;
+}
+
+.carousel-inner img {
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+button.btn {
+  @include button-styles($primary-color, $font-color);
+}
+
+/* SECCION DE CONTACTOS */
+#contacto {
+  background-color: $primary-color;
+  color: $font-color;
+  padding: 40px 20px;
+  text-align: center;
+
+  h2 {
+    color: $font-color;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .contact-info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    .contact-item {
+      margin: 20px;
+      text-align: center;
+      
+      i {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 24px;
+      }
+
+      .icono-redes {
+        color: $font-color;
+        font-size: 24px;
+        margin: 0 5px;
+
+        &.fab.fa-facebook-square {
+          color: #3b5998;
+        }
+
+        &.fab.fa-instagram {
+          color: #E1306C;
+        }
+      }
+
+      &.icono-localizacion {
+        color: #FF6347;
+      }
+
+      &.icono-correo {
+        color: #32CD32;
+      }
+
+      &.icono-telefono {
+        color: #1E90FF;
+      }
+    }
+
+    .icono-redes-container {
+      @extend %flex-center;
+      gap: 10px;
+    }
+  }
+}
+
+/* EXPERIENCIA.HTML */
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  height: 300px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.image-container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.image-container p {
+  text-align: center;
+  margin-top: 10px;
+}
