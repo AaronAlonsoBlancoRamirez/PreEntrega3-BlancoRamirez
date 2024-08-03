@@ -11,51 +11,73 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#"><img id="logo-img" src="imagenes/logo2.png" alt="logo"></a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                  <li class="nav-item">
-                    <a class="nav-link" href="index.html">Inicio</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="experiencias.html">Experiencias</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="catalogo.html">Catálogo</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>          
+        <div class="navbar" id="barra">
+            <img src="imagenes/logo2.png" alt="Mi sitio web" class="logo">
+            <a href="index.html" class="active">Inicio</a>
+            <a href="experiencias.html">Experiencias</a>
+            <a href="catalogo.html">Catalogo</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        
     </header>
-    <main class="container-fluid">
-        <div class="row">
-            <div class="col-md-6 p-3">
-                <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <main id=container_secciones class="container-fluid">
+
+        <div class="row my-4">
+            <div id="galeria" class="col-md-4 p-3">
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="2000">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img class="d-block w-100" src="imagenes/md_img1.jpeg" alt="Descripción del servicio">
+                            <div class="img-container d-flex justify-content-center align-items-center">
+                                <img class="d-block w-100 h-100" src="imagenes/md_img1.jpeg" alt="Descripción del servicio">
+                            </div>
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="imagenes/md_img2.jpeg" alt="Descripción del servicio">
+                            <div class="img-container d-flex justify-content-center align-items-center">
+                                <img class="d-block w-100 h-100" src="imagenes/md_img2.jpeg" alt="Descripción del servicio">
+                            </div>
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="imagenes/md_img3.jpeg" alt="Descripción del servicio">
+                            <div class="img-container d-flex justify-content-center align-items-center">
+                                <img class="d-block w-100 h-100" src="imagenes/md_img3.jpeg" alt="Descripción del servicio">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 p-3">
+            <div class="col-md-8 p-3">
                 <h2>Pergola de Aluminio y Policarbonato</h2>
                 <p>Transforma tu espacio al aire libre con nuestra elegante pérgola de aluminio y policarbonato. Diseñada para ofrecer sombra y protección contra los elementos, esta pérgola es perfecta para jardines, patios y terrazas. Su estructura de aluminio proporciona durabilidad y resistencia a la corrosión, mientras que el techo de policarbonato permite el paso de la luz natural sin dejar de protegerte de los rayos UV y la lluvia.</p>
                 <a href="catalogo.html" class="btn btn-dark">Ver producto</a>
             </div>
         </div>
+        
+
+       
+
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="imagenes/md_img1_oficial.jpeg" alt="First slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="imagenes/md_img2_oficial.jpeg" alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="imagenes/md_img4_oficial.jpeg" alt="Third slide">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+        </div>
+
         <div class="row my-4">
             <div class="col-md-6 p-3">
                 <img src="imagenes/imagen_quienes_somos3.jpeg" class="img-fluid" alt="Imagen Representativa">
@@ -65,10 +87,12 @@
                 <p>En SILIKAN E.I.R.L., contamos con más de 35 años de experiencia en el sector, dedicándonos a ofrecer soluciones de vidriería de alta calidad. Nuestro compromiso se centra en realizar trabajos bien hechos y a precios cómodos, asegurando siempre un balance justo entre calidad y costo.Nos enorgullece la marca que dejamos en cada proyecto, la cual representa confiabilidad y excelencia. Nuestro objetivo es superar las expectativas de nuestros clientes mediante un servicio excepcional y productos duraderos que agregan valor a cada espacio.</p>
             </div>
         </div>
-        <section id="proyectos" class="mt-4">
-            <h2>Sección mostrar algunos de los proyectos</h2>
-            <!-- Aquí irán los proyectos -->
-        </section>
+
+
+        <div class="imagen-fondo">
+            <img src="imagenes/imagen_quienes_somos3.jpeg" alt="mi_Logo" class="Logo">
+        </div>
+
         <div id="contacto" class="mt-4">
             <h2>Contacto</h2>
             <div class="row">
@@ -99,10 +123,12 @@
                 </div>
             </div>
         </div>
+
     </main>
+    <script src="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="animacion.js"></script>
+ 
 </body>
 </html>

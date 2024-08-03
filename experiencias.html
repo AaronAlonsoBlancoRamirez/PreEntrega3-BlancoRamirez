@@ -11,27 +11,15 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img id="logo-img" src="imagenes/logo2.png" alt="logo"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="experiencias.html">Experiencias</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="catalogo.html">Catálogo</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <div class="navbar" id="barra">
+            <img src="imagenes/logo2.png" alt="Mi sitio web" class="logo">
+            <a href="index.html" class="active">Inicio</a>
+            <a href="experiencias.html">Experiencias</a>
+            <a href="catalogo.html">Catalogo</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+        </div> 
     </header>
     <main class="container mt-4">
         <div class="row mb-4">
